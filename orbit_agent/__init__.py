@@ -1,4 +1,4 @@
-"""Top-level import shim for the Orbit Agent demo."""
+"""Top-level import shim for the Agent Demo package."""
 
 from __future__ import annotations
 
@@ -12,4 +12,3 @@ if _src_pkg.is_dir():
     __path__.append(str(_src_pkg))
 
 __version__ = "0.1.0"
-

@@ -1,4 +1,4 @@
-"""Command line entry point for Orbit Agent Demo."""
+"""Command line entry point for Agent Demo."""
 
 from __future__ import annotations
 
@@ -89,4 +89,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agent Workflow Demo</title>
+    <title>Agent Demo</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -13,7 +13,7 @@
     <main class="shell">
       <section class="hero card">
         <div class="eyebrow">Agent Demo</div>
-        <h1>Agent Workflow Demo</h1>
+        <h1>Agent Demo</h1>
         <p class="lede">
           一个用于展示任务拆解、工作区扫描、报告生成和结果校验流程的示例项目。
         </p>
@@ -42,6 +42,29 @@
         </article>
       </section>
 
+      <section class="card">
+        <h2>项目信息</h2>
+        <div class="copy-block">
+          <label>项目摘要</label>
+          <textarea readonly id="summary-copy">该项目实现了一个基于命令行的任务处理流程。程序接收目标描述后，生成执行步骤，扫描指定工作区，提取文件信息，并输出 Markdown 报告与 trace 文件。项目包含 CLI、示例工作区和静态展示页面。</textarea>
+          <button class="btn secondary" data-copy="#summary-copy">复制内容</button>
+        </div>
+
+        <div class="copy-grid">
+          <div class="copy-block">
+            <label>运行命令</label>
+            <textarea readonly id="command-copy">python -m orbit_agent "summarize the demo workspace" --root demo_workspace --save-report output/report.md --save-trace output/trace.json</textarea>
+            <button class="btn secondary" data-copy="#command-copy">复制内容</button>
+          </div>
+
+          <div class="copy-block">
+            <label>输出文件</label>
+            <textarea readonly id="output-copy">output/report.md\noutput/trace.json</textarea>
+            <button class="btn secondary" data-copy="#output-copy">复制内容</button>
+          </div>
+        </div>
+      </section>
+
       <section class="grid">
         <article class="card">
           <h2>产出文件</h2>
@@ -61,5 +84,6 @@
         </article>
       </section>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>

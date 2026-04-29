@@ -20,7 +20,7 @@ def render_report(goal: str, plan: list[PlanStep], context: WorkspaceContext) ->
     """Render a Markdown report for the agent run."""
 
     lines: list[str] = []
-    lines.append("# Orbit Agent Report")
+    lines.append("# Agent Demo Report")
     lines.append("")
     lines.append(f"- Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
     lines.append(f"- Goal: {goal.strip()}")
@@ -75,4 +75,3 @@ def render_report(goal: str, plan: list[PlanStep], context: WorkspaceContext) ->
     lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
-

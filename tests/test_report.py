@@ -17,7 +17,6 @@ class ReportTests(unittest.TestCase):
                 todo_count=0,
             )
             report = render_report("summarize the workspace", [PlanStep("One", "Two")], context)
-            self.assertIn("# Orbit Agent Report", report)
+            self.assertIn("# Agent Demo Report", report)
             self.assertIn("## Plan", report)
             self.assertIn("## Verification", report)
-

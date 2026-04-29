@@ -1,4 +1,4 @@
-# Agent Workflow Demo
+# Agent Demo
 
 `orbit-agent` is a compact demonstration of an agentic workflow.
 
@@ -63,4 +63,4 @@ The repository includes `demo_workspace/` so you can show a real run without any
 
 ## Suggested GitHub title
 
-`Agent Workflow Demo: planning, inspection, and reporting`
+`Agent Demo: planning, inspection, and reporting`
