@@ -13,7 +13,7 @@ It does four simple but very visible things:
 
 - The core problem: turn a vague request into a structured execution brief.
 - The core logic flow: `plan -> inspect -> draft -> verify`.
-- The proof: terminal output, saved Markdown reports, a small trace JSON, and a simple browser UI.
+- The outputs: terminal logs, Markdown reports, a trace JSON file, and a simple browser UI.
 
 ## Why this looks like an agent
 
@@ -45,11 +45,10 @@ Open [`web/index.html`](web/index.html) in a browser to see the lightweight fron
 
 The page shows:
 
-- What the agent does
-- A visual workflow
-- The example output structure
-- Copy-ready submission text
-- The upload checklist in a more natural tone
+- Project functions
+- Execution flow
+- Output files
+- Runtime overview
 
 ## What it outputs
 
@@ -65,7 +64,3 @@ The repository includes `demo_workspace/` so you can show a real run without any
 ## Suggested GitHub title
 
 `Orbit Agent Demo: a tiny planning + inspection + reporting workflow`
-
-## Suggested submission wording
-
-> I built a small agent-style CLI and a matching browser demo. It takes a goal, breaks it into steps, scans a workspace for useful evidence, and generates a verified Markdown report plus a trace file. The repo is meant to show planning, context gathering, drafting, and self-checking in one compact project.

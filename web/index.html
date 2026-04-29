@@ -12,81 +12,54 @@
 
     <main class="shell">
       <section class="hero card">
-        <div class="eyebrow">Agent Demo · GitHub-ready</div>
-        <h1>一个很小，但能把 agent 味道讲清楚的项目</h1>
+        <div class="eyebrow">Agent Demo</div>
+        <h1>Orbit Agent Demo</h1>
         <p class="lede">
-          它会先把目标拆开，再去扫工作区找线索，然后生成一份能直接贴出去的 Markdown 报告，还会顺手做一次自检。
+          一个用于展示任务拆解、工作区扫描、报告生成和结果校验流程的示例项目。
         </p>
         <div class="cta-row">
           <a class="btn primary" href="../README.md">看项目说明</a>
-          <a class="btn ghost" href="../SUBMISSION_TEMPLATE.md">看提交模板</a>
+          <a class="btn ghost" href="../output/report.md">看示例输出</a>
         </div>
       </section>
 
       <section class="grid">
         <article class="card">
-          <h2>它到底做什么</h2>
+          <h2>主要功能</h2>
           <ul>
-            <li>先把一句话目标拆成 4 到 5 个步骤</li>
-            <li>再去扫目标目录，找最像“证据”的文件</li>
-            <li>然后生成一份可直接展示的 Markdown 报告</li>
-            <li>最后再检查一遍结果有没有漏项</li>
+            <li>将输入目标拆解为执行步骤</li>
+            <li>扫描目标目录并提取文件信息</li>
+            <li>生成 Markdown 格式的分析报告</li>
+            <li>输出 trace 文件用于记录执行结果</li>
           </ul>
         </article>
 
         <article class="card">
-          <h2>你可以怎么讲</h2>
+          <h2>执行流程</h2>
           <p>
-            这不是那种“只会写一句我用了 AI”的项目，而是有点像真的 agent 工作流：
-            会规划，会看上下文，会产出结果，也会检查自己。
+            输入目标后，程序依次执行任务拆解、目录扫描、内容整理、报告生成和结果校验。
           </p>
         </article>
       </section>
 
-      <section class="card">
-        <h2>提交时可以直接写的口语版内容</h2>
-        <div class="copy-block">
-          <label>项目描述</label>
-          <textarea readonly id="project-copy">我做了一个很小但完整的 agent demo。你给它一个目标，它会先拆步骤，再去扫工作区找线索，最后输出一份 Markdown 报告和 trace 文件。整个项目想展示的就是：一个 agent 怎么规划、怎么找上下文、怎么整理结果、怎么自检。</textarea>
-          <button class="btn secondary" data-copy="#project-copy">复制这段</button>
-        </div>
-
-        <div class="copy-grid">
-          <div class="copy-block">
-            <label>Agent 工具</label>
-            <textarea readonly id="tool-copy">Codex。这个项目我主要就是一边边做一边调，整个流程都围着它展开。</textarea>
-            <button class="btn secondary" data-copy="#tool-copy">复制这段</button>
-          </div>
-
-          <div class="copy-block">
-            <label>模型系列</label>
-            <textarea readonly id="model-copy">GPT。实际做项目的时候主要靠这个系列来完成理解、规划和改写。</textarea>
-            <button class="btn secondary" data-copy="#model-copy">复制这段</button>
-          </div>
-        </div>
-      </section>
-
       <section class="grid">
         <article class="card">
-          <h2>上传材料怎么配</h2>
+          <h2>产出文件</h2>
           <ul>
-            <li>终端运行截图，能看到命令和输出</li>
-            <li>`output/report.md`，证明它真的产出了结果</li>
-            <li>`output/trace.json`，证明它有结构化输出</li>
-            <li>GitHub 仓库链接，证明项目是完整的</li>
+            <li>`output/report.md`：Markdown 报告</li>
+            <li>`output/trace.json`：结构化执行记录</li>
+            <li>`demo_workspace/`：示例工作区</li>
+            <li>`web/`：静态展示页面</li>
           </ul>
         </article>
 
         <article class="card">
-          <h2>更口语一点的上传说明</h2>
+          <h2>运行方式</h2>
           <p>
-            我这次做的是一个很小但完整的 agent demo，不是只会说自己会用 AI。
-            它真的有任务拆解、上下文扫描、结果整理和自检，仓库里也有 CLI、网页展示页、示例工作区和输出文件。
+            通过命令行传入目标和工作区路径后，程序执行扫描、整理和输出流程，并在 `output/` 目录中生成结果文件。
           </p>
         </article>
       </section>
     </main>
-
-    <script src="app.js"></script>
   </body>
 </html>
