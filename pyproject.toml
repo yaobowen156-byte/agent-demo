@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "orbit-agent-demo"
+name = "agent-workflow-demo"
 version = "0.1.0"
 description = "A tiny agentic CLI that plans, inspects, and reports on a task."
 readme = "README.md"
@@ -22,4 +22,3 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
